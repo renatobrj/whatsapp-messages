@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700i,900&display=swap');
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#whatsappOperator {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+#whatsappOperator .content {
+  position: relative;
+}
+#whatsappOperator .buttonOpen {
+    z-index: 99;
+    position: relative;
+    transition: all 0.3s ease-in;
+}
+#whatsappOperator .buttonOpen.active {
+    transform: rotate(40deg);
+}
+#whatsappOperator .buttonOpen img {
+    width: 40px;
+    border: 7px #64ad61 solid;
+    border-radius: 50%;
+    box-shadow: 0 0px 7px 1px #969696;
+    animation-name: slidein;
+    cursor: pointer;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes slidein {
+    from {
+        box-shadow: 0 0px 8px 2px #969696;
+    }
+  
+    to {
+        box-shadow: 0 0px 13px 2px #828080;
+        border: 7px #42b13d solid;
+    }
+  }
+#whatsappOperator .whatsappContentOperators {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 5px;
+    bottom: 80px;
+    width: 290px;
+    left: -240px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0px 2px 8px 4px #eaeaea;
+    transform: translateY(+80px);
+    opacity: 0;
+    visibility: hidden;
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.3s;
+    z-index: 9;
+}
+#whatsappOperator .whatsappContentOperators.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+#whatsappOperator .whatsappContentOperators .whatsappContentHeader {
+    background: rgb(170,255,182);
+    background: linear-gradient(0deg, rgb(177, 239, 186) 0%, rgb(115, 195, 124) 49%, rgb(42, 185, 58) 100%);
+    border-radius: 5px 5px 0 0;
+    padding: 15px 15px 15px 15px;
+    position: relative;
+}
+#whatsappOperator .whatsappContentOperators .whatsappContentHeader .buttonClosed {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+#whatsappOperator .whatsappContentOperators .whatsappContentHeader .buttonClosed img {
+    width: 13px;
+    border-radius: 50%;
+    background: #ccfbd3;
+    padding: 5px;
+}
+#whatsappOperator .whatsappContentOperators .whatsappContentHeader h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+#whatsappOperator .whatsappContentOperators .whatsappContentHeader p {
+    margin: 0;
+    margin-top: 15px;
+    color: #2f2f2f;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 300;
+}
+
+#whatsappOperator .whatsappListOperator a {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f3f3f3;
+    text-decoration: none;;
+    transition: all 0.3s ease;
+}
+#whatsappOperator .whatsappListOperator a:hover {
+    background: #e1ffe5;
+}
+#whatsappOperator .whatsappListOperator a:hover .headerOperator {
+    margin-left: 10px;
+}
+#whatsappOperator .whatsappListOperator .listOperator .headerOperator {
+    display: flex;
+    transition: all 0.2s ease;
+}
+
+#whatsappOperator .whatsappListOperator .footerOperator {
+    line-height: 20px;
+}
+#whatsappOperator .whatsappListOperator .thumbOperator {
+    margin-bottom: -2px;
+}
+#whatsappOperator .whatsappListOperator .thumbOperator img {
+    width: 35px;
+    margin-right: 15px;
+    
+}
+#whatsappOperator .whatsappListOperator .functionOperator {
+    font-size: 13px;
+    text-decoration: none;
+    color: #696969;
+}
+#whatsappOperator .whatsappListOperator .nameOperator {
+    font-size: 16px;
+    color: #373738;
+}
+
+
+@media(max-width: 767px) {
+    #whatsappOperator {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+    #whatsappOperator .buttonOpen img {
+        width: 30px;
+    }
+    #whatsappOperator .whatsappContentOperators {
+        bottom: 65px;
+        width: 260px;
+        left: -215px;
+    }
+}
